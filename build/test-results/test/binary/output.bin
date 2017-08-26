@@ -1,0 +1,139 @@
+€2017-08-25T19:00:09.405 | est worker | ClasspathStoryFinder | INFO   - Searching for stories called [berlin-clock.story] in [[C:\project\java-berlin-clock-master\java-berlin-clock-master\build\classes\java\test, C:\project\java-berlin-clock-master\java-berlin-clock-master\build\resources\test, C:\project\java-berlin-clock-master\java-berlin-clock-master\build\classes\java\main]] 
+ö2017-08-25T19:00:09.413 | est worker | aviouralTestEmbedder | INFO   - Running [BehaviouralTestEmbedder] with spring_stories [[file:/C:/project/java-berlin-clock-master/java-berlin-clock-master/build/resources/test/stories/berlin-clock.story]] 
+!Processing system properties {}
+ÜUsing controls EmbedderControls[batch=false,skip=false,generateViewAfterStories=true,ignoreFailureInStories=false,ignoreFailureInView=false,verboseFailures=false,verboseFiltering=false,storyTimeoutInSecs=300,threads=1]
+
+(BeforeStories)
+
+‚Running story file:/C:/project/java-berlin-clock-master/java-berlin-clock-master/build/resources/test/stories/berlin-clock.story
+Story: The Berlin Clock
+u(file:/C:/project/java-berlin-clock-master/java-berlin-clock-master/build/resources/test/stories/berlin-clock.story)
+Meta:
+@scope interview
+
+Scenario: Midnight
+When the time is 00:00:00
+ Then the clock should look like
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO (FAILED)
+!(java.lang.NullPointerException)
+
+java.lang.NullPointerException
+g	at com.ubs.opsit.interviews.BerlinClockFixture.thenTheClockShouldLookLike(BerlinClockFixture.java:34)
+@	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+R	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+Z	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+5	at java.lang.reflect.Method.invoke(Method.java:498)
+W	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:550)
+N	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:499)
+Z	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:479)
+Q	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:443)
+O	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:219)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:180)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:229)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:201)
+=	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+T	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+T	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+*	at java.lang.Thread.run(Thread.java:748)
+
+"Scenario: Middle of the afternoon
+When the time is 13:17:01
+ Then the clock should look like
+O
+RROO
+RRRO
+YYROOOOOOOO
+YYOO (FAILED)
+!(java.lang.NullPointerException)
+
+java.lang.NullPointerException
+g	at com.ubs.opsit.interviews.BerlinClockFixture.thenTheClockShouldLookLike(BerlinClockFixture.java:34)
+@	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+R	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+Z	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+5	at java.lang.reflect.Method.invoke(Method.java:498)
+W	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:550)
+N	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:499)
+Z	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:479)
+Q	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:443)
+O	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:219)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:180)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:229)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:201)
+=	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+T	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+T	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+*	at java.lang.Thread.run(Thread.java:748)
+
+Scenario: Just before midnight
+When the time is 23:59:59
+ Then the clock should look like
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+YYYY (FAILED)
+!(java.lang.NullPointerException)
+
+java.lang.NullPointerException
+g	at com.ubs.opsit.interviews.BerlinClockFixture.thenTheClockShouldLookLike(BerlinClockFixture.java:34)
+@	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+R	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+Z	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+5	at java.lang.reflect.Method.invoke(Method.java:498)
+W	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:550)
+N	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:499)
+Z	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:479)
+Q	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:443)
+O	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:219)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:180)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:229)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:201)
+=	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+T	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+T	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+*	at java.lang.Thread.run(Thread.java:748)
+
+Scenario: Midnight
+When the time is 24:00:00
+ Then the clock should look like
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
+OOOO (FAILED)
+!(java.lang.NullPointerException)
+
+java.lang.NullPointerException
+g	at com.ubs.opsit.interviews.BerlinClockFixture.thenTheClockShouldLookLike(BerlinClockFixture.java:34)
+@	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+R	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+Z	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+5	at java.lang.reflect.Method.invoke(Method.java:498)
+W	at org.jbehave.core.steps.StepCreator$ParameterisedStep.perform(StepCreator.java:550)
+N	at org.jbehave.core.embedder.StoryRunner$FineSoFar.run(StoryRunner.java:499)
+Z	at org.jbehave.core.embedder.StoryRunner.runStepsWhileKeepingState(StoryRunner.java:479)
+Q	at org.jbehave.core.embedder.StoryRunner.runScenarioSteps(StoryRunner.java:443)
+O	at org.jbehave.core.embedder.StoryRunner.runCancellable(StoryRunner.java:305)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:219)
+D	at org.jbehave.core.embedder.StoryRunner.run(StoryRunner.java:180)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:229)
+U	at org.jbehave.core.embedder.StoryManager$EnqueuedStory.call(StoryManager.java:201)
+=	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+T	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+T	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+*	at java.lang.Thread.run(Thread.java:748)
+
+
+
+(AfterStories)
+
+ÝGenerating reports view to 'C:\project\java-berlin-clock-master\java-berlin-clock-master\build\classes\java\jbehave' using formats '[stats, html, console]' and view properties '{defaultFormats=stats, decorateNonHtml=true, viewDirectory=view, decorated=ftl/jbehave-report-decorated.ftl, reports=ftl/jbehave-reports-with-totals.ftl, maps=ftl/jbehave-maps.ftl, navigator=ftl/jbehave-navigator.ftl, views=ftl/jbehave-views.ftl, nonDecorated=ftl/jbehave-report-non-decorated.ftl}'
+hReports view generated with 1 stories (of which 0 pending) containing 4 scenarios (of which 0 pending)
